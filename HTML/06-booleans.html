@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      console.log(typeof "true");
+      console.log(typeof true);
+
+      false;
+
+      console.log(3 < 5);
+
+      console.log(5 == "5.00");
+      console.log(5 === "5.00"); // type conversion
+      //   console.log(5 == "5.00");
+
+      if (true) {
+        console.log("hello");
+      } else {
+        console.log("else");
+      }
+
+      const age = 15;
+
+      if (15 >= 16) {
+        console.log("legal");
+      } else if (15 >= 14) {
+        console.log("almost there");
+      } else {
+        console.log("illegal");
+      }
+
+      console.log(true && true);
+      console.log(true || true);
+      console.log(!true);
+
+      if (5) {
+        // truthy value
+        console.log("truthy");
+      }
+      if (0) {
+        // falsy value: false, 0, NaN, undefined, null
+        console.log("falsy");
+      }
+
+      const cartQuantity = 5;
+      if (cartQuantity) {
+        console.log("cart has products");
+      }
+
+      console.log(!0); // true
+
+      //operators
+      const result = true ? "truthy" : "falsy";
+      console.log(result);
+    </script>
+  </body>
+</html>
