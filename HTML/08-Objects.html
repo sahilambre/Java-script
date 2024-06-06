@@ -26,34 +26,79 @@
       //   delete product.newProperty;
       //   console.log(product);
 
-      const product2 = {
-        name: "shirt",
-        ["delivery-time"]: "1 day",
-        rating: {
-          stars: 4.5,
-          count: 87,
-        },
-        fun: function function1() {
-          console.log("function inside onject");
+      //   const product2 = {
+      //     name: "shirt",
+      //     ["delivery-time"]: "1 day",
+      //     rating: {
+      //       stars: 4.5,
+      //       count: 87,
+      //     },
+      //     fun: function function1() {
+      //       console.log("function inside onject");
+      //     },
+      //   };
+
+      //   console.log(product2.name); //dot notation
+      //   console.log(product2["name"]); // bracket notation
+      //   console.log(product2["delivery-time"]);
+
+      //   console.log(product2.rating);
+      //   console.log(product2.rating.count);
+      //   console.log(product2.fun()); //returns undefined
+      //   product2.fun();
+
+      //   // Built in Objects
+      //   // Json, localstorage
+
+      //   console.log(JSON.stringify(product2));
+
+      //   const jsonString = JSON.stringify(product2);
+      //   console.log(JSON.parse(jsonString));
+
+      // object boxing
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      const object1 = {
+        message: "hello",
+      };
+
+      const object2 = object1;
+
+      object1.message = "good job";
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: "good job",
+      };
+
+      console.log(object3 === object1); // false
+      console.log(object1 === object2); // referenced to same onject so true
+
+      const object4 = {
+        message: "good jjob",
+        price: 799,
+      };
+
+      const messaege = object4.message;
+      const { message, price } = object4; //destructuring
+      console.log(price);
+      console.log(message);
+
+      const object5 = {
+        // message: message,
+        message,
+        // method: function function1() {
+        //   console.log("method");
+        // }
+        method() {
+          console.log("method");
         },
       };
 
-      console.log(product2.name); //dot notation
-      console.log(product2["name"]); // bracket notation
-      console.log(product2["delivery-time"]);
-
-      console.log(product2.rating);
-      console.log(product2.rating.count);
-      console.log(product2.fun()); //returns undefined
-      product2.fun();
-
-      // Built in Objects
-      // Json, localstorage
-
-      console.log(JSON.stringify(product2));
-
-      const jsonString = JSON.stringify(product2);
-      console.log(JSON.parse(jsonString));
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>
